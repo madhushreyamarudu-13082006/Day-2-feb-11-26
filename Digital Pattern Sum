@@ -1,0 +1,23 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner ch = new Scanner(System.in);
+        int a = ch.nextInt();
+        while(a>=10){
+            int sum = 0;
+            while(a!=0){
+            int rem = a%10;
+            sum = sum+rem;
+            a = a/10;
+        }
+        a = sum;
+    }
+    System.out.println(a);
+}
+}    
