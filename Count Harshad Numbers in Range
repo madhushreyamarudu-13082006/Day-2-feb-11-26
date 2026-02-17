@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner ch = new Scanner(System.in);
+        long a = ch.nextLong();
+        long b = ch.nextLong();
+        long count=0,rem;
+        while(a<=b){
+            long temp = a;
+            long sum = 0;
+            while(temp!=0){
+                rem = temp%10;
+                sum = sum+rem;
+                temp = temp/10;
+            }
+            if(sum!=0 && a%sum==0){
+                count++;
+            }
+                a++;
+        }
+        System.out.println(count);
+    }
+}
